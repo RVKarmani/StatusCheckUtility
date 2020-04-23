@@ -2,6 +2,6 @@
     {
         "Description": "Jenkins Utility",
         "Name": "jenkins",
-        "Ip":"10.0.2.120:800"
+        "Ip":"10.0.2.120:8080"
     }
 ]
