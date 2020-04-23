@@ -11,6 +11,8 @@ do
 		echo "${NAMES[$ix]} is UP"
 	else
 		echo "${NAMES[$ix]} is DOWN"
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Microservice Check" -a $DIR/../logs/"${NAMES[$ix]}.log" -- vemrohit@publicisgroupe.net
+		rm $DIR/"error.log" || true
+		docker logs ${NAMES[$ix]} &> error.log
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification RegistryELK Check" -a $DIR/error.log" -- vemrohit@publicisgroupe.net
 	fi
 done
