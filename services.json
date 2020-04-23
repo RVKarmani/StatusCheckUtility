@@ -3,11 +3,6 @@
         "Description": "Jenkins Utility",
         "Name": "jenkins",
         "Ip":"10.0.2.120:800"
-    },
-    {
-        "Description": "SonarQube Utility",
-        "Name": "sonarqube",
-        "Ip":"10.0.2.120:9000"
     }
 ]
 
