@@ -13,6 +13,6 @@ do
 		echo "${NAMES[$ix]} is DOWN"
 		rm $DIR/"error.log" || true
 		docker logs ${NAMES[$ix]} &> error.log
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification RegistryELK Check" -a $DIR/error.log" -- vemrohit@publicisgroupe.net
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification RegistryELK Check" -a "$DIR/error.log" -- vemrohit@publicisgroupe.net
 	fi
 done
