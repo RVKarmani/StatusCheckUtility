@@ -1,13 +1,13 @@
 [
     {
-        "Description": "Jenkins Utility",
-        "Name": "jenkins",
-        "Ip":"10.0.2.120:800"
+        "Description": "Postgres Database",
+        "Name": "some-postgres",
+        "Ip":"10.0.2.204:7017"
     },
     {
-        "Description": "SonarQube Utility",
-        "Name": "sonarqube",
-        "Ip":"10.0.2.120:9000"
+        "Description":"Mongo Database",
+        "Name": "ubuntu_mongodb_1",
+        "Ip":"10.0.2.204:5432"
     }
 ]
 

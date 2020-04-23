@@ -13,6 +13,6 @@ do
 		echo "${NAMES[$ix]} is DOWN"
 		rm ./"error.log"
 		docker logs ${NAMES[$ix]} &> error.log
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Utility Check" -a ./"error.log" -- vemrohit@publicisgroupe.net
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Databases Check" -a ./"error.log" -- vemrohit@publicisgroupe.net
 	fi
 done
