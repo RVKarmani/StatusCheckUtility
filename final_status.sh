@@ -11,6 +11,6 @@ do
 		echo "${NAMES[$ix]} is UP"
 	else
 		echo "${NAMES[$ix]} is DOWN"
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Service Check" -a ../logs/"${NAMES[$ix]}.log" -- vemrohit@publicisgroupe.net
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Microservice Check" -a $DIR/../logs/"${NAMES[$ix]}.log" -- vemrohit@publicisgroupe.net
 	fi
 done
