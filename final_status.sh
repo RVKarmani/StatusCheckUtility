@@ -1,18 +1,18 @@
 #!/bin/bash
-#VARIANT 2 - ITERATING OVER ADDRESSES
-IP=( `jq -r ".[].Ip " services.json` )
-NAMES=( `jq -r ".[].Name " services.json` )
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+IP=( `jq -r ".[].Ip " $DIR/services.json` )
+NAMES=( `jq -r ".[].Name " $DIR/services.json` )
 
 for ix in ${!IP[@]}
 do
-	STATUS=`./wait-for-it.sh ${IP[$ix]} --strict -- echo "UP"`
+	STATUS=`$DIR/wait-for-it.sh ${IP[$ix]} -t 600 --strict -- echo "UP"`
 	if [ "$STATUS" == "UP" ]
 	then
 		echo "${NAMES[$ix]} is UP"
 	else
 		echo "${NAMES[$ix]} is DOWN"
-		rm ./"error.log"
+		rm $DIR/"error.log"
 		docker logs ${NAMES[$ix]} &> error.log
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Databases Check" -a ./"error.log" -- vemrohit@publicisgroupe.net
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Databases Check" -a $DIR/"error.log" -- vemrohit@publicisgroupe.net
 	fi
 done
