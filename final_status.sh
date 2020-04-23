@@ -1,8 +1,7 @@
 #!/bin/bash
 #VARIANT 2 - ITERATING OVER ADDRESSES
-IP=( `jq -r ".[].Ip " microservice.json` )
-NAMES=( `jq -r ".[].Name " microservice.json` )
-EMAIL_BODY=""
+IP=( `jq -r ".[].Ip " services.json` )
+NAMES=( `jq -r ".[].Name " services.json` )
 
 for ix in ${!IP[@]}
 do
@@ -12,6 +11,8 @@ do
 		echo "${NAMES[$ix]} is UP"
 	else
 		echo "${NAMES[$ix]} is DOWN"
-		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Service Check" -a ../logs/"${NAMES[$ix]}.log" -- vemrohit@publicisgroupe.net
+		rm ./"error.log"
+		docker logs ${NAMES[$ix]} &> error.log
+		echo "${NAMES[$ix]} is DOWN" | mutt -s "Gamification Utility Check" -a ./"error.log" -- vemrohit@publicisgroupe.net
 	fi
 done

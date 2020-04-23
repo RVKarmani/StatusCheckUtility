@@ -1,43 +1,13 @@
 [
     {
-        "Description": "User Management Service",
-        "Name": "user-management-service",
-        "Ip":"10.0.2.81:8999"
+        "Description": "Jenkins Utility",
+        "Name": "jenkins",
+        "Ip":"10.0.2.120:800"
     },
     {
-        "Description": "Password Service",
-        "Name": "password-service",
-        "Ip":"10.0.2.81:8642"
-    },
-    {
-        "Description": "Rules Service",
-        "Name": "rules-service",
-        "Ip":"10.0.2.81:9009"
-    },
-    {
-        "Description": "Notification Service",
-        "Name": "notification-service",
-        "Ip":"10.0.2.81:6005"
-    },
-    {
-        "Description": "Kafka Producer Service",
-        "Name": "producer-service",
-        "Ip":"10.0.2.81:8000"
-    },
-    {
-        "Description": "Kafka Consumer Service",
-        "Name": "consumer-service",
-        "Ip":"10.0.2.81:7500"
-    },
-    {
-        "Description": "Admin Activities Service",
-        "Name": "admin-activities",
-        "Ip":"10.0.2.81:877"
-    },
-    {
-        "Description": "Branding Service",
-        "Name": "branding-service",
-        "Ip":"10.0.2.81:6000"
+        "Description": "SonarQube Utility",
+        "Name": "sonarqube",
+        "Ip":"10.0.2.120:9000"
     }
 ]
 
