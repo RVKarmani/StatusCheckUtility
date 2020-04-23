@@ -32,7 +32,7 @@
     {
         "Description": "Admin Activities Service",
         "Name": "admin-activities",
-        "Ip":"10.0.2.81:877"
+        "Ip":"10.0.2.81:8767"
     },
     {
         "Description": "Branding Service",
@@ -40,5 +40,3 @@
         "Ip":"10.0.2.81:6000"
     }
 ]
-
-

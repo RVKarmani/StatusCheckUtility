@@ -2,7 +2,6 @@
 #VARIANT 2 - ITERATING OVER ADDRESSES
 IP=( `jq -r ".[].Ip " microservice.json` )
 NAMES=( `jq -r ".[].Name " microservice.json` )
-EMAIL_BODY=""
 
 for ix in ${!IP[@]}
 do
