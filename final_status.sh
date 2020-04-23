@@ -1,5 +1,4 @@
 #!/bin/bash
-#VARIANT 2 - ITERATING OVER ADDRESSES
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 IP=( `jq -r ".[].Ip " $DIR/services.json` )
 NAMES=( `jq -r ".[].Name " $DIR/services.json` )
