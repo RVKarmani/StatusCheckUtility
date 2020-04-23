@@ -1,5 +1,4 @@
 #!/bin/bash
-mutt -s "Reboot Utility Check" -- vemrohit@publicisgroupe.net
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 IP=( `jq -r ".[].Ip " $DIR/services.json` )
 NAMES=( `jq -r ".[].Name " $DIR/services.json` )
